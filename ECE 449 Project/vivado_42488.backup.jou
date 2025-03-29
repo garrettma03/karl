@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Mar 17 17:27:35 2025
+# Process ID: 42488
+# Current directory: C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/ECE449-Lab-Project/ECE 449 Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent40684 C:\Users\Karl\Documents\University\Spring 2025\ECE449\Project\ECE449-Lab-Project\ECE 449 Project\ECE 449 Project.xpr
+# Log file: C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/ECE449-Lab-Project/ECE 449 Project/vivado.log
+# Journal file: C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/ECE449-Lab-Project/ECE 449 Project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/ECE449-Lab-Project/ECE 449 Project/ECE 449 Project.xpr}
+update_compile_order -fileset sources_1
+add_files -norecurse {{C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/ECE449-Lab-Project/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/PC.vhd}}
+update_compile_order -fileset sources_1

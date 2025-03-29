@@ -1,0 +1,16 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ECE 449 Project.srcs/sources_1/new/ALU.vhd" \
+"../../../../ECE 449 Project.srcs/sources_1/new/EX_MEM.vhd" \
+"../../../../ECE 449 Project.srcs/sources_1/new/ID_EX.vhd" \
+"../../../../ECE 449 Project.srcs/sources_1/new/IF_ID.vhd" \
+"../../../../ECE 449 Project.srcs/sources_1/new/MEM_WB.vhd" \
+"../../../../ECE 449 Project.srcs/sources_1/new/PC.vhd" \
+"../../../../ECE 449 Project.srcs/sources_1/new/RF8.vhd" \
+"../../../../ECE 449 Project.srcs/sources_1/new/ROM.vhd" \
+"../../../../ECE 449 Project.srcs/sources_1/new/decoder.vhd" \
+"../../../../ECE 449 Project.srcs/sources_1/new/top.vhd" \
+"../../../../ECE 449 Project.srcs/sim_1/new/top_new_tb.vhd" \
+
+# Do not sort compile order
+nosort

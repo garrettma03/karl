@@ -1,0 +1,158 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Mar 23 16:48:22 2025
+# Process ID: 1844
+# Current directory: C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/ECE449-Lab-Project/ECE 449 Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent41716 C:\Users\Karl\Documents\University\Spring 2025\ECE449\Project\ECE449-Lab-Project\ECE 449 Project\ECE 449 Project.xpr
+# Log file: C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/ECE449-Lab-Project/ECE 449 Project/vivado.log
+# Journal file: C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/ECE449-Lab-Project/ECE 449 Project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/ECE449-Lab-Project/ECE 449 Project/ECE 449 Project.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source cpu_top_tb.tcl
+add_wave {{/cpu_top_tb/uut/pc_addr}} {{/cpu_top_tb/uut/instruction}} {{/cpu_top_tb/uut/opcode}} {{/cpu_top_tb/uut/ra}} {{/cpu_top_tb/uut/rb}} {{/cpu_top_tb/uut/rc}} 
+restart
+run 200 ns
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source cpu_top_tb.tcl
+add_wave {{/cpu_top_tb/uut/pc_addr}} {{/cpu_top_tb/uut/instruction}} {{/cpu_top_tb/uut/opcode}} {{/cpu_top_tb/uut/ra}} {{/cpu_top_tb/uut/rb}} {{/cpu_top_tb/uut/rc}} 
+restart
+run 200 ns
+restart
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source cpu_top_tb.tcl
+add_wave {{/cpu_top_tb/uut/pc_addr}} {{/cpu_top_tb/uut/instruction}} {{/cpu_top_tb/uut/opcode}} {{/cpu_top_tb/uut/ra}} {{/cpu_top_tb/uut/rb}} {{/cpu_top_tb/uut/rc}} 
+restart
+run 200 ns
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+launch_simulation
+source cpu_top_tb.tcl
+add_wave {{/cpu_top_tb/uut/pc_addr}} {{/cpu_top_tb/uut/instruction}} {{/cpu_top_tb/uut/opcode}} {{/cpu_top_tb/uut/ra}} {{/cpu_top_tb/uut/rb}} {{/cpu_top_tb/uut/rc}} 
+restart
+run 200 ns
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source cpu_top_tb.tcl
+add_wave {{/cpu_top_tb/uut/pc_addr}} {{/cpu_top_tb/uut/instruction}} {{/cpu_top_tb/uut/opcode}} {{/cpu_top_tb/uut/ra}} {{/cpu_top_tb/uut/rb}} {{/cpu_top_tb/uut/rc}} 
+restart
+run 200 ns
+close_sim
+launch_simulation
+source cpu_top_tb.tcl
+add_wave {{/cpu_top_tb/uut/pc_addr}} {{/cpu_top_tb/uut/instruction}} {{/cpu_top_tb/uut/opcode}} {{/cpu_top_tb/uut/ra}} {{/cpu_top_tb/uut/rb}} {{/cpu_top_tb/uut/rc}} 
+restart
+run 200 ns
+close_sim
+launch_simulation
+source cpu_top_tb.tcl
+add_wave {{/cpu_top_tb/uut/pc_addr}} {{/cpu_top_tb/uut/instruction}} {{/cpu_top_tb/uut/opcode}} {{/cpu_top_tb/uut/ra}} {{/cpu_top_tb/uut/rb}} {{/cpu_top_tb/uut/rc}} 
+restart
+run 200 ns
+close_sim
+launch_simulation
+source cpu_top_tb.tcl
+add_wave {{/cpu_top_tb/uut/pc_addr}} {{/cpu_top_tb/uut/instruction}} {{/cpu_top_tb/uut/opcode}} {{/cpu_top_tb/uut/ra}} {{/cpu_top_tb/uut/rb}} {{/cpu_top_tb/uut/rc}} 
+restart
+run 200 ns
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source cpu_top_tb.tcl
+add_wave {{/cpu_top_tb/uut/instruction}} {{/cpu_top_tb/uut/opcode}} {{/cpu_top_tb/uut/ra}} {{/cpu_top_tb/uut/rb}} {{/cpu_top_tb/uut/rc}} 
+restart
+run 200 ns
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse {{C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/ECE449-Lab-Project/ECE 449 Project/ECE 449 Project.srcs/sim_1/new/Test_Format_A_16Bit.mem}}
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source cpu_top_tb.tcl
+add_wave {{/cpu_top_tb/uut/pc_addr}} {{/cpu_top_tb/uut/instruction}} {{/cpu_top_tb/uut/opcode}} {{/cpu_top_tb/uut/ra}} {{/cpu_top_tb/uut/rb}} {{/cpu_top_tb/uut/rc}} 
+restart
+run 200 ns
+restart
+relaunch_sim
+restart
+run 200 ns
+relaunch_sim
+restart
+run 200 ns
+restart
+run 300 ns
+relaunch_sim
+restart
+run 300 ns
+restart
+run 200 ns
+relaunch_sim
+restart
+run 200 ns
+restart
+run 200 ns
+restart
+relaunch_sim
+restart
+run 200 ns
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source cpu_top_tb.tcl
+add_wave {{/cpu_top_tb/uut/pc_addr}} {{/cpu_top_tb/uut/instruction}} {{/cpu_top_tb/uut/opcode}} {{/cpu_top_tb/uut/ra}} {{/cpu_top_tb/uut/rb}} {{/cpu_top_tb/uut/rc}} 
+restart
+run 200 ns
+relaunch_sim
+restart
+run 200 ns
+relaunch_sim
+restart
+run 200 ns
+restart
+run 400 ns
+restart
+run 250 ns
+close_sim
+launch_simulation
+source cpu_top_tb.tcl
+restart
+add_wave {{/cpu_top_tb/uut/pc_addr}} {{/cpu_top_tb/uut/instruction}} {{/cpu_top_tb/uut/opcode}} {{/cpu_top_tb/uut/ra}} {{/cpu_top_tb/uut/rb}} {{/cpu_top_tb/uut/rc}} 
+restart
+run 250 ns
+restart
+relaunch_sim
+restart
+run 250 ns
+restart
+run 500 ns
+restart
+relaunch_sim
+restart
+run 500 ns
+restart
+run 200 ns
+restart
+relaunch_sim
+restart
+run 200 ns
+restart
+run 200 ns
+relaunch_sim
+restart
+run 200 ns
+restart
+relaunch_sim
+restart
+run 200 ns
+restart
+relaunch_sim
+close_sim

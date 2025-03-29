@@ -1,0 +1,1016 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15812 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 389.070 ; gain = 99.973
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:42]
+INFO: [Synth 8-3491] module 'PC' declared at 'C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/PC.vhd:5' bound to instance 'PC_inst' of component 'PC' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:245]
+INFO: [Synth 8-638] synthesizing module 'PC' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/PC.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'PC' (1#1) [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/PC.vhd:19]
+INFO: [Synth 8-3491] module 'ROM' declared at 'C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ROM.vhd:38' bound to instance 'ROM_inst' of component 'ROM' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:258]
+INFO: [Synth 8-638] synthesizing module 'ROM' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ROM.vhd:53]
+	Parameter MEMORY_SIZE bound to: 2048 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: auto - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: Test_Format_A_16Bit.mem - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter READ_DATA_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 8 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_memory_sprom' declared at 'C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:7178' bound to instance 'xpm_memory_sprom_inst' of component 'xpm_memory_sprom' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ROM.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_sprom' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:7178]
+	Parameter MEMORY_SIZE bound to: 2048 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: auto - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: Test_Format_A_16Bit.mem - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter READ_DATA_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 8 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 2 - type: integer 
+	Parameter P_MEMORY_PRIMITIVE bound to: 0 - type: integer 
+	Parameter P_CLOCKING_MODE bound to: 0 - type: integer 
+	Parameter P_ECC_MODE bound to: 0 - type: integer 
+	Parameter P_WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter P_MEMORY_OPTIMIZATION bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_base' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+	Parameter MEMORY_TYPE bound to: 3 - type: integer 
+	Parameter MEMORY_SIZE bound to: 2048 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: 0 - type: integer 
+	Parameter CLOCKING_MODE bound to: 0 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: Test_Format_A_16Bit.mem - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 8 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 8 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 8 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 2 - type: integer 
+	Parameter WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_B bound to: 8 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 8 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 8 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 2 - type: integer 
+	Parameter WRITE_MODE_B bound to: 1 - type: integer 
+	Parameter P_MEMORY_PRIMITIVE bound to: auto - type: string 
+	Parameter P_MIN_WIDTH_DATA_A bound to: 8 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_B bound to: 8 - type: integer 
+	Parameter P_MIN_WIDTH_DATA bound to: 8 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_ECC bound to: 8 - type: integer 
+	Parameter P_MAX_DEPTH_DATA bound to: 256 - type: integer 
+	Parameter P_ECC_MODE bound to: no_ecc - type: string 
+	Parameter P_MEMORY_OPT bound to: yes - type: string 
+	Parameter P_WIDTH_COL_WRITE_A bound to: 8 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_B bound to: 8 - type: integer 
+	Parameter P_NUM_COLS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_COLS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_B bound to: 1 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_A bound to: 8 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_B bound to: 8 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_A bound to: 8 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_B bound to: 8 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_B bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_B bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_A bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_B bound to: 0 - type: integer 
+	Parameter P_SDP_WRITE_MODE bound to: yes - type: string 
+	Parameter NUM_CHAR_LOC bound to: 0 - type: integer 
+	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 8 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:456]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'Test_Format_A_16Bit.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1068]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_a.gen_douta_pipe.ena_pipe_reg[0] was removed.  [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:2045]
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+WARNING: [Synth 8-3848] Net mem in module/entity xpm_memory_base does not have driver. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:990]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base' (2#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sprom' (3#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:7178]
+INFO: [Synth 8-256] done synthesizing module 'ROM' (4#1) [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ROM.vhd:53]
+INFO: [Synth 8-3491] module 'IF_ID' declared at 'C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/IF_ID.vhd:5' bound to instance 'IF_ID_inst' of component 'IF_ID' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:272]
+INFO: [Synth 8-638] synthesizing module 'IF_ID' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/IF_ID.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'IF_ID' (5#1) [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/IF_ID.vhd:17]
+INFO: [Synth 8-3491] module 'decoder' declared at 'C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/decoder.vhd:18' bound to instance 'Decoder_inst' of component 'decoder' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:283]
+INFO: [Synth 8-638] synthesizing module 'decoder' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/decoder.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'decoder' (6#1) [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/decoder.vhd:31]
+INFO: [Synth 8-3491] module 'register_file' declared at 'C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/RF8.vhd:8' bound to instance 'RF_inst' of component 'register_file' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+INFO: [Synth 8-638] synthesizing module 'register_file' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/RF8.vhd:25]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/RF8.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'register_file' (7#1) [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/RF8.vhd:25]
+INFO: [Synth 8-3491] module 'ID_EX' declared at 'C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ID_EX.vhd:5' bound to instance 'ID_EX_inst' of component 'ID_EX' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:311]
+INFO: [Synth 8-638] synthesizing module 'ID_EX' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ID_EX.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'ID_EX' (8#1) [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ID_EX.vhd:24]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ALU.vhd:5' bound to instance 'ALU_inst' of component 'ALU' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:329]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ALU.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (9#1) [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ALU.vhd:17]
+INFO: [Synth 8-3491] module 'EX_MEM' declared at 'C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/EX_MEM.vhd:4' bound to instance 'EX_MEM_inst' of component 'EX_MEM' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:340]
+INFO: [Synth 8-638] synthesizing module 'EX_MEM' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/EX_MEM.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'EX_MEM' (10#1) [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/EX_MEM.vhd:20]
+INFO: [Synth 8-3491] module 'MEM_WB' declared at 'C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/MEM_WB.vhd:4' bound to instance 'MEM_WB_inst' of component 'MEM_WB' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:364]
+INFO: [Synth 8-638] synthesizing module 'MEM_WB' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/MEM_WB.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'MEM_WB' (11#1) [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/MEM_WB.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'top' (12#1) [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:42]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port sleep
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port wea[0]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dina[7]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dina[6]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dina[5]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dina[4]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dina[3]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dina[2]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dina[1]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dina[0]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectsbiterra
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectdbiterra
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port clkb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port rstb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port enb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port regceb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port web[0]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[7]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[6]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[5]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[4]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[3]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[2]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[1]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[0]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[7]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[6]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[5]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[4]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[3]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[2]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[1]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[0]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectsbiterrb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectdbiterrb
+WARNING: [Synth 8-3331] design ROM has unconnected port sbiterra
+WARNING: [Synth 8-3331] design ROM has unconnected port dbiterra
+WARNING: [Synth 8-3331] design ROM has unconnected port pc_addr[15]
+WARNING: [Synth 8-3331] design ROM has unconnected port pc_addr[14]
+WARNING: [Synth 8-3331] design ROM has unconnected port pc_addr[13]
+WARNING: [Synth 8-3331] design ROM has unconnected port pc_addr[12]
+WARNING: [Synth 8-3331] design ROM has unconnected port pc_addr[11]
+WARNING: [Synth 8-3331] design ROM has unconnected port pc_addr[10]
+WARNING: [Synth 8-3331] design ROM has unconnected port pc_addr[9]
+WARNING: [Synth 8-3331] design ROM has unconnected port pc_addr[8]
+WARNING: [Synth 8-3331] design ROM has unconnected port injectsbiterra
+WARNING: [Synth 8-3331] design ROM has unconnected port injectdbiterra
+WARNING: [Synth 8-3331] design top has unconnected port in_port[15]
+WARNING: [Synth 8-3331] design top has unconnected port in_port[14]
+WARNING: [Synth 8-3331] design top has unconnected port in_port[13]
+WARNING: [Synth 8-3331] design top has unconnected port in_port[12]
+WARNING: [Synth 8-3331] design top has unconnected port in_port[11]
+WARNING: [Synth 8-3331] design top has unconnected port in_port[10]
+WARNING: [Synth 8-3331] design top has unconnected port in_port[9]
+WARNING: [Synth 8-3331] design top has unconnected port in_port[8]
+WARNING: [Synth 8-3331] design top has unconnected port in_port[7]
+WARNING: [Synth 8-3331] design top has unconnected port in_port[6]
+WARNING: [Synth 8-3331] design top has unconnected port in_port[5]
+WARNING: [Synth 8-3331] design top has unconnected port in_port[4]
+WARNING: [Synth 8-3331] design top has unconnected port in_port[3]
+WARNING: [Synth 8-3331] design top has unconnected port in_port[2]
+WARNING: [Synth 8-3331] design top has unconnected port in_port[1]
+WARNING: [Synth 8-3331] design top has unconnected port in_port[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 442.281 ; gain = 153.184
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_index[2] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_index[1] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_index[0] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_data[15] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_data[14] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_data[13] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_data[12] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_data[11] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_data[10] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_data[9] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_data[8] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_data[7] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_data[6] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_data[5] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_data[4] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_data[3] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_data[2] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_data[1] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+WARNING: [Synth 8-3295] tying undriven pin RF_inst:wr_data[0] to constant 0 [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd:295]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 442.281 ; gain = 153.184
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 760.816 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 760.816 ; gain = 471.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 760.816 ; gain = 471.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 760.816 ; gain = 471.719
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'stage_reg' in module 'ROM'
+INFO: [Synth 8-5544] ROM "pc_enable" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pc_latched" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "high_byte" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "low_byte" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_addr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stage" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "O_alu_mode" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "O_wb_opr" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "O_is_shift" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "O_is_InOut" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "O_mem_opr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bZ_flag" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                            00001 |                              000
+                 iSTATE0 |                            00010 |                              001
+                 iSTATE1 |                            00100 |                              010
+                 iSTATE2 |                            01000 |                              011
+                 iSTATE3 |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'stage_reg' using encoding 'one-hot' in module 'ROM'
+WARNING: [Synth 8-327] inferring latch for variable 'O_mem_addr_reg' [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/EX_MEM.vhd:27]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 760.816 ; gain = 471.719
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 12    
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 3     
+	                3 Bit    Registers := 5     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+	   8 Input     16 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	  11 Input      3 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 2     
+	  27 Input      1 Bit        Muxes := 5     
+	   8 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module PC 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      1 Bit        Muxes := 1     
+Module xpm_memory_base 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
+Module ROM 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 4     
++---Muxes : 
+	   5 Input      8 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module IF_ID 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
+Module decoder 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	  27 Input      1 Bit        Muxes := 5     
+Module register_file 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 8     
+Module ID_EX 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 1     
++---Muxes : 
+	   8 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module EX_MEM 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module MEM_WB 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element Decoder_inst/O_mem_opr_reg was removed.  [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/decoder.vhd:40]
+WARNING: [Synth 8-6014] Unused sequential element ID_EX_inst/O_mem_opr_reg was removed.  [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ID_EX.vhd:36]
+WARNING: [Synth 8-6014] Unused sequential element ID_EX_inst/O_ra_reg was removed.  [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ID_EX.vhd:37]
+WARNING: [Synth 8-6014] Unused sequential element EX_MEM_inst/O_mem_opr_reg was removed.  [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/EX_MEM.vhd:28]
+WARNING: [Synth 8-6014] Unused sequential element EX_MEM_inst/O_ra_reg was removed.  [C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/EX_MEM.vhd:30]
+INFO: [Synth 8-5546] ROM "Decoder_inst/O_alu_mode" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "Decoder_inst/O_wb_opr" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "Decoder_inst/O_is_shift" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Decoder_inst/O_is_InOut" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ALU_inst/bZ_flag" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP ALU_inst/ARG, operation Mode is: A*B.
+DSP Report: operator ALU_inst/ARG is absorbed into DSP ALU_inst/ARG.
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port wea[0]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dina[7]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dina[6]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dina[5]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dina[4]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dina[3]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dina[2]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dina[1]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dina[0]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectsbiterra
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectdbiterra
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port clkb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port rstb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port enb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port regceb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port web[0]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[7]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[6]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[5]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[4]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[3]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[2]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[1]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[0]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[7]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[6]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[5]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[4]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[3]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[2]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[1]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[0]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectsbiterrb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectdbiterrb
+WARNING: [Synth 8-3331] design top has unconnected port in_port[15]
+WARNING: [Synth 8-3331] design top has unconnected port in_port[14]
+WARNING: [Synth 8-3331] design top has unconnected port in_port[13]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.douta_reg_reg[1]' (FDE) to 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.douta_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.douta_reg_reg[0]' (FDE) to 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.douta_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.douta_reg_reg[2]' (FDE) to 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.douta_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.douta_reg_reg[7]' (FDE) to 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.douta_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.douta_reg_reg[5]' (FDE) to 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.douta_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.douta_reg_reg[4]' (FDE) to 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.douta_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.douta_reg_reg[3]' (FDE) to 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.douta_reg_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst /\gen_rd_a.douta_reg_reg[6] )
+INFO: [Synth 8-3886] merging instance 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.gen_douta_pipe.douta_pipe_reg[0][1]' (FDRE) to 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.gen_douta_pipe.douta_pipe_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.gen_douta_pipe.douta_pipe_reg[0][0]' (FDRE) to 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.gen_douta_pipe.douta_pipe_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.gen_douta_pipe.douta_pipe_reg[0][2]' (FDRE) to 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.gen_douta_pipe.douta_pipe_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.gen_douta_pipe.douta_pipe_reg[0][7]' (FDRE) to 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.gen_douta_pipe.douta_pipe_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.gen_douta_pipe.douta_pipe_reg[0][5]' (FDRE) to 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.gen_douta_pipe.douta_pipe_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.gen_douta_pipe.douta_pipe_reg[0][4]' (FDRE) to 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.gen_douta_pipe.douta_pipe_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.gen_douta_pipe.douta_pipe_reg[0][3]' (FDRE) to 'ROM_inst/xpm_memory_sprom_inst/xpm_memory_base_inst/gen_rd_a.gen_douta_pipe.douta_pipe_reg[0][6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[7][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[6][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[5][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[4][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[3][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[2][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[7][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[6][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[5][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[4][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[3][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\RF_inst/reg_file_reg[2][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\RF_inst/reg_file_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[7][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[6][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[5][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[4][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[3][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[2][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[1][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[7][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[6][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[5][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[4][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[3][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[2][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\RF_inst/reg_file_reg[1][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[7][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[6][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[5][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[4][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[3][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[2][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[1][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[7][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[6][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[5][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[4][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[3][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[2][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[1][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[7][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[6][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[5][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[4][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[3][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[2][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[1][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[7][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[6][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[5][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[4][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[3][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[2][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[1][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[7][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[6][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[5][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[4][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[3][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[2][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[1][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[7][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[6][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[5][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[4][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[3][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[2][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[1][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[7][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[6][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[5][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[4][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[3][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[2][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[1][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[7][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[6][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[5][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[4][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[3][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[2][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[1][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[7][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[6][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[5][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[4][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[3][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[2][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[1][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[7][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[6][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[5][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[4][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[3][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[2][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[1][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF_inst/reg_file_reg[7][14] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'ROM_inst/low_byte_reg[7]' (FDRE) to 'ROM_inst/low_byte_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/low_byte_reg[6]' (FDRE) to 'ROM_inst/low_byte_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/low_byte_reg[5]' (FDRE) to 'ROM_inst/low_byte_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/low_byte_reg[4]' (FDRE) to 'ROM_inst/low_byte_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/low_byte_reg[3]' (FDRE) to 'ROM_inst/low_byte_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/low_byte_reg[2]' (FDRE) to 'ROM_inst/low_byte_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ROM_inst/low_byte_reg[0]' (FDRE) to 'ROM_inst/low_byte_reg[1]'
+INFO: [Synth 8-3886] merging instance 'IF_ID_inst/O_rc_reg[0]' (FDR) to 'IF_ID_inst/O_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IF_ID_inst/O_rc_reg[1]' (FDR) to 'IF_ID_inst/O_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IF_ID_inst/O_rc_reg[2]' (FDR) to 'IF_ID_inst/O_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IF_ID_inst/O_opcode_reg[1]' (FDR) to 'IF_ID_inst/O_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IF_ID_inst/O_opcode_reg[2]' (FDR) to 'IF_ID_inst/O_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IF_ID_inst/O_opcode_reg[3]' (FDR) to 'IF_ID_inst/O_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IF_ID_inst/O_opcode_reg[4]' (FDR) to 'IF_ID_inst/O_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IF_ID_inst/O_opcode_reg[5]' (FDR) to 'IF_ID_inst/O_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IF_ID_inst/O_opcode_reg[6]' (FDR) to 'IF_ID_inst/O_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IF_ID_inst/O_rb_reg[2]' (FDR) to 'IF_ID_inst/O_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IF_ID_inst/O_rb_reg[1]' (FDR) to 'IF_ID_inst/O_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IF_ID_inst/O_rb_reg[0]' (FDR) to 'IF_ID_inst/O_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IF_ID_inst/O_ra_reg[2]' (FDR) to 'IF_ID_inst/O_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IF_ID_inst/O_ra_reg[1]' (FDR) to 'IF_ID_inst/O_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IF_ID_inst/O_ra_reg[0]' (FDR) to 'IF_ID_inst/O_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Decoder_inst/O_is_shift_reg' (FDCE) to 'Decoder_inst/O_is_InOut_reg'
+INFO: [Synth 8-3886] merging instance 'Decoder_inst/O_alu_mode_reg[4]' (FDCE) to 'Decoder_inst/O_alu_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Decoder_inst/O_alu_mode_reg[5]' (FDCE) to 'Decoder_inst/O_alu_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Decoder_inst/O_alu_mode_reg[3]' (FDCE) to 'Decoder_inst/O_alu_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Decoder_inst/O_alu_mode_reg[1]' (FDCE) to 'Decoder_inst/O_alu_mode_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Decoder_inst/O_alu_mode_reg[2]' (FDCE) to 'Decoder_inst/O_alu_mode_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_alu_mode_reg[4]' (FDC) to 'ID_EX_inst/O_alu_mode_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_alu_mode_reg[5]' (FDC) to 'ID_EX_inst/O_alu_mode_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_alu_mode_reg[3]' (FDC) to 'ID_EX_inst/O_alu_mode_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_alu_mode_reg[1]' (FDC) to 'ID_EX_inst/O_alu_mode_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_alu_mode_reg[2]' (FDC) to 'ID_EX_inst/O_alu_mode_reg[6]'
+INFO: [Synth 8-3886] merging instance 'Decoder_inst/O_is_InOut_reg' (FDCE) to 'Decoder_inst/O_wb_opr_reg'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_alu_mode_reg[6]' (FDC) to 'ID_EX_inst/O_wb_opr_reg'
+INFO: [Synth 8-3886] merging instance 'Decoder_inst/O_alu_mode_reg[6]' (FDCE) to 'Decoder_inst/O_alu_mode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_op1_reg[0]' (FDC) to 'ID_EX_inst/O_op2_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_op1_reg[1]' (FDC) to 'ID_EX_inst/O_op2_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_op1_reg[2]' (FDC) to 'ID_EX_inst/O_op2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_op1_reg[3]' (FDC) to 'ID_EX_inst/O_op2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_op1_reg[4]' (FDC) to 'ID_EX_inst/O_op2_reg[4]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_op1_reg[5]' (FDC) to 'ID_EX_inst/O_op2_reg[5]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_op1_reg[6]' (FDC) to 'ID_EX_inst/O_op2_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_op1_reg[7]' (FDC) to 'ID_EX_inst/O_op2_reg[7]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_op1_reg[8]' (FDC) to 'ID_EX_inst/O_op2_reg[8]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_op1_reg[9]' (FDC) to 'ID_EX_inst/O_op2_reg[9]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_op1_reg[10]' (FDC) to 'ID_EX_inst/O_op2_reg[10]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_op1_reg[11]' (FDC) to 'ID_EX_inst/O_op2_reg[11]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_op1_reg[12]' (FDC) to 'ID_EX_inst/O_op2_reg[12]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_op1_reg[13]' (FDC) to 'ID_EX_inst/O_op2_reg[13]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_op1_reg[14]' (FDC) to 'ID_EX_inst/O_op2_reg[14]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_op2_reg[15]' (FDC) to 'ID_EX_inst/O_op1_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_inst/O_alu_mode_reg[0]' (FDC) to 'ID_EX_inst/O_wb_opr_reg'
+WARNING: [Synth 8-3332] Sequential element (gen_rd_a.douta_reg_reg[6]) is unused and will be removed from module xpm_memory_base.
+WARNING: [Synth 8-3332] Sequential element (gen_rd_a.gen_douta_pipe.douta_pipe_reg[0][6]) is unused and will be removed from module xpm_memory_base.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM_inst/O_mem_addr_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM_inst/O_mem_addr_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM_inst/O_mem_addr_reg[13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM_inst/O_mem_addr_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM_inst/O_mem_addr_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM_inst/O_mem_addr_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM_inst/O_mem_addr_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM_inst/O_mem_addr_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM_inst/O_mem_addr_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM_inst/O_mem_addr_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM_inst/O_mem_addr_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM_inst/O_mem_addr_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM_inst/O_mem_addr_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM_inst/O_mem_addr_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM_inst/O_mem_addr_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM_inst/O_mem_addr_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PC_inst/pc_reg_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PC_inst/pc_reg_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PC_inst/pc_reg_reg[13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PC_inst/pc_reg_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PC_inst/pc_reg_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PC_inst/pc_reg_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PC_inst/pc_reg_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PC_inst/pc_reg_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PC_inst/pc_reg_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PC_inst/pc_reg_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PC_inst/pc_reg_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PC_inst/pc_reg_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PC_inst/pc_reg_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PC_inst/pc_reg_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PC_inst/pc_reg_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PC_inst/pc_reg_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/pc_latched_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/pc_latched_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/pc_latched_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/pc_latched_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/pc_latched_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/pc_latched_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/pc_latched_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/pc_latched_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/rom_addr_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/rom_addr_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/rom_addr_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/rom_addr_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/rom_addr_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/rom_addr_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/rom_addr_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/rom_addr_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/low_byte_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/high_byte_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/high_byte_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/high_byte_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/high_byte_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/high_byte_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/high_byte_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/high_byte_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ROM_inst/high_byte_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[0][15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[0][14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[0][13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[0][12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[0][11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[0][10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[0][9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[0][8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[0][7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[0][6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[0][5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[0][4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[0][3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[0][2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[0][1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[0][0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[1][15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[1][14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[1][13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[1][12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[1][11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[1][10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[1][9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[1][8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[1][7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[1][6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[1][5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[1][4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[1][3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[1][2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[1][1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[1][0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[2][15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[2][14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[2][13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[2][12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[2][11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[2][10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[2][9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[2][8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF_inst/reg_file_reg[2][7]) is unused and will be removed from module top.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 760.816 ; gain = 471.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ALU         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 760.816 ; gain = 471.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 760.816 ; gain = 471.719
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 768.953 ; gain = 479.855
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 768.953 ; gain = 479.855
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 768.953 ; gain = 479.855
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-115] binding instance 'i_0' in module 'ROM' to reference 'xpm_memory_sprom' which has no pins
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 768.953 ; gain = 479.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 768.953 ; gain = 479.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 768.953 ; gain = 479.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 768.953 ; gain = 479.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |FDRE |     4|
+|3     |FDSE |     1|
+|4     |IBUF |     2|
+|5     |OBUF |    16|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------------------------+-----------------+------+
+|      |Instance                   |Module           |Cells |
++------+---------------------------+-----------------+------+
+|1     |top                        |                 |    24|
+|2     |  ROM_inst                 |ROM              |     5|
+|3     |    xpm_memory_sprom_inst  |xpm_memory_sprom |     0|
+|4     |      xpm_memory_base_inst |xpm_memory_base  |     0|
++------+---------------------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 768.953 ; gain = 479.855
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 282 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 768.953 ; gain = 161.320
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 768.953 ; gain = 479.855
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+237 Infos, 327 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 768.953 ; gain = 492.438
+INFO: [Common 17-1381] The checkpoint 'C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 768.953 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 29 14:51:28 2025...
