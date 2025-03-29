@@ -8,32 +8,16 @@
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
+-- Description: Fixed ROM read latency, addressing, and reset handling.
 -- 
 ----------------------------------------------------------------------------------
 
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 Library xpm;
 use xpm.vcomponents.all;
-use ieee.numeric_std.all;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity ROM is
     port(
@@ -52,89 +36,96 @@ end ROM;
 
 architecture Behavioral of ROM is
     signal rom_addr       : std_logic_vector(7 downto 0);
-    signal douta          : std_logic_vector(7 downto 0);
+    signal douta, douta_reg : std_logic_vector(7 downto 0);
     signal low_byte       : std_logic_vector(7 downto 0) := (others => '0');
     signal high_byte      : std_logic_vector(7 downto 0) := (others => '0');
     signal pc_latched     : std_logic_vector(7 downto 0) := (others => '0');
-    signal ena, regcea : std_logic := '1';
-    signal stage         : integer range 0 to 4 := 0;
+    signal ena, regcea    : std_logic := '1';
+    signal stage          : integer range 0 to 6 := 0;
+    signal reset_done     : std_logic := '0';
+    
     
 begin
-    -- xpm_memory_sprom: Single Port ROM
-    -- Xilinx Parameterized Macro, Version 2017.4
+    -- XPM Single Port ROM instance
     xpm_memory_sprom_inst : xpm_memory_sprom
         generic map (
-        -- Common module generics
-        MEMORY_SIZE => 2048, --positive integer
-        MEMORY_PRIMITIVE => "auto", --string; "auto", "distributed", or "block";
-        MEMORY_INIT_FILE => "Test_Format_A_16Bit.mem", --string; "none" or "<filename>.mem"
-        MEMORY_INIT_PARAM => "", --string;
+        MEMORY_SIZE => 2048,
+        MEMORY_PRIMITIVE => "auto",
+        MEMORY_INIT_FILE => "Test_Format_A_16Bit.mem",
+        MEMORY_INIT_PARAM => "",
         USE_MEM_INIT => 1,
-        WAKEUP_TIME => "disable_sleep", --string; "disable_sleep" or "use_sleep_pin"
-        MESSAGE_CONTROL => 0, --integer; 0,1
-        ECC_MODE => "no_ecc", --string; "no_ecc", "encode_only", "decode_only" or "both_encode_and_decode"
-        AUTO_SLEEP_TIME => 0, --Do not Change
-        MEMORY_OPTIMIZATION => "true", --string; "true", "false"
-        -- Port A module generics
-        READ_DATA_WIDTH_A => 8, --positive integer
-        ADDR_WIDTH_A => 8, --positive integer
-        READ_RESET_VALUE_A => "0", --string
-        READ_LATENCY_A => 2 --non-negative integer
+        WAKEUP_TIME => "disable_sleep",
+        MESSAGE_CONTROL => 0,
+        ECC_MODE => "no_ecc",
+        AUTO_SLEEP_TIME => 0,
+        MEMORY_OPTIMIZATION => "true",
+        READ_DATA_WIDTH_A => 8,
+        ADDR_WIDTH_A => 8,
+        READ_RESET_VALUE_A => "0",
+        READ_LATENCY_A => 2
         )
         port map (
-            -- Common module ports
             sleep => sleep,
-            -- Port A module ports
             clka => clk,
             rsta => rst,
             ena => ena,
             regcea => regcea,
             addra => rom_addr,
-            injectsbiterra => '0', --do not change
-            injectdbiterra => '0', --do not change
+            injectsbiterra => '0',
+            injectdbiterra => '0',
             douta => douta,
-            sbiterra => open, --do not change
-            dbiterra => open --do not change
+            sbiterra => open,
+            dbiterra => open
     );
-    -- End of xpm_memory_sprom_inst instance declaration
     
     -- ROM Access Process
     process(clk)
     begin
         if rising_edge(clk) then
             if rst = '1' then
+                reset_done <= '0';
                 stage <= 0;
                 rom_addr <= (others => '0');
                 low_byte <= (others => '0');
                 high_byte <= (others => '0');
                 pc_latched <= (others => '0');
+            elsif reset_done = '0' then
+                reset_done <= '1';
             else
                 case stage is
                     when 0 =>
-                        -- Stage 0: start fetch from pc_addr (low byte)
+                        -- Fetch low byte from pc_addr
                         pc_latched <= pc_addr(7 downto 0);
                         rom_addr <= pc_addr(7 downto 0);
                         stage <= 1;
 
                     when 1 =>
-                        -- Wait for ROM latency
+                        -- Wait for ROM latency (2 cycles)
                         stage <= 2;
-
+                    
                     when 2 =>
-                        -- Latch low byte, issue high byte read
-                        low_byte <= douta;
-                        rom_addr <= std_logic_vector(unsigned(pc_latched) + 1);
                         stage <= 3;
-
+                    
                     when 3 =>
-                        -- Wait for ROM latency
+                        -- Latch low byte, issue high byte read
+                        douta_reg <= douta;
+                        low_byte <= douta_reg;
+                        rom_addr <= std_logic_vector(unsigned(pc_latched) + 1);
                         stage <= 4;
-
+                    
                     when 4 =>
+                        -- Wait for ROM latency (2 cycles)
+                        stage <= 5;
+                    
+                    when 5 =>
+                        stage <= 6;
+                    
+                    when 6 =>
                         -- Latch high byte
-                        high_byte <= douta;
+                        douta_reg <= douta;
+                        high_byte <= douta_reg;
                         stage <= 0;
-
+                    
                     when others =>
                         stage <= 0;
                 end case;
@@ -142,9 +133,8 @@ begin
         end if;
     end process;
     
-    -- Final instruction
+    -- Final instruction output
     instruction_out <= low_byte & high_byte;
     pc_enable <= '1' when stage = 0 else '0';
-
-
+    
 end Behavioral;

@@ -300,9 +300,9 @@ begin
         rd_data1    => rd_data1,
         rd_data2    => rd_data2,
         I_ra        => if_id_ra,
-        wr_index    => wb_ra,
-        wr_data     => wb_data,
-        wr_enable   => wb_enable,
+        wr_index    => exmem_ra,
+        wr_data     => exmem_mem_data,
+        wr_enable   => memwb_wb_opr,
         I_is_shift  => is_shift,
         I_is_InOut  => is_inout
     );
