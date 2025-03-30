@@ -1,0 +1,164 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 39596
+License: Customer
+
+Current time: 	Sun Mar 30 12:23:05 PDT 2025
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 16
+
+Screen size: 2048x1152
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 147 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	Karl
+User home directory: C:/Users/Karl
+User working directory: C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/karl/ECE 449 Project
+User country: 	AE
+User language: 	en
+User locale: 	en_AE
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.4
+RDI_DATADIR: C:/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/Karl/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/Karl/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/Karl/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/karl/ECE 449 Project/vivado.log
+Vivado journal file location: 	C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/karl/ECE 449 Project/vivado.jou
+Engine tmp dir: 	C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/karl/ECE 449 Project/.Xil/Vivado-39596-Kale-Desktop
+
+GUI allocated memory:	182 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 663 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\Karl\Documents\University\Spring 2025\ECE449\Project\karl\ECE 449 Project\ECE 449 Project.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/karl/ECE 449 Project/ECE 449 Project.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/karl/ECE 449 Project' 
+// [GUI Memory]: 59 MB (+59168kb) [00:00:05]
+// [Engine Memory]: 495 MB (+367135kb) [00:00:05]
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 97 MB (+37057kb) [00:00:06]
+// [Engine Memory]: 552 MB (+34475kb) [00:00:06]
+// [GUI Memory]: 102 MB (+301kb) [00:00:06]
+// [Engine Memory]: 620 MB (+42181kb) [00:00:06]
+// [GUI Memory]: 117 MB (+9695kb) [00:00:07]
+// [GUI Memory]: 126 MB (+4082kb) [00:00:07]
+// Tcl Message: open_project {C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/karl/ECE 449 Project/ECE 449 Project.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/karl/ECE 449 Project' INFO: [Project 1-313] Project file moved from 'G:/karl/karl/ECE 449 Project' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'. 
+// [Engine Memory]: 663 MB (+12052kb) [00:00:07]
+// Project name: ECE 449 Project; location: C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/karl/ECE 449 Project; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 676 MB. GUI used memory: 43 MB. Current time: 3/30/25 12:23:06 PM PDT
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 15 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Structural) (top.vhd)]", 1); // B (D, cj)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cj)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cj): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (h, c)
+// Elapsed time: 16 seconds
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "VHDL", 3); // bY (N, F)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "branch_unit"); // X (N, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (h, c)
+// 'h' command handler elapsed time: 29 seconds
+dismissDialog("Add Sources"); // c (cj)
+// Tcl Message: close [ open {C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/karl/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/branch_unit.vhd} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/karl/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/branch_unit.vhd}} 
+// I (cj): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, branch_unit(Behavioral) (branch_unit.vhd)]", 11, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, branch_unit(Behavioral) (branch_unit.vhd)]", 11, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Elapsed time: 64 seconds
+selectCodeEditor("branch_unit.vhd", 0, 360); // cd (w, cj)
+typeControlKey((HResource) null, "branch_unit.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 1132, 261); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 1144, 282); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 591, 302); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 591, 298); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 596, 301); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 602, 300); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 604, 303); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 769, 333); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 601, 315); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 662, 335); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 586, 263); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 541, 299); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 625, 298); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 627, 300); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 628, 320); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 656, 317); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 638, 317); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 600, 362); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 570, 383); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 574, 383); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 632, 401); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 685, 385); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 820, 417); // cd (w, cj)
+selectCodeEditor("branch_unit.vhd", 914, 385); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 143 seconds
+selectCodeEditor("branch_unit.vhd", 794, 130); // cd (w, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Structural) (top.vhd), ROM_inst : ROM(Behavioral) (ROM.vhd)]", 3, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Structural) (top.vhd), ROM_inst : ROM(Behavioral) (ROM.vhd)]", 3, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 14, true); // B (D, cj) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 14); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 15); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File]", 19); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, Test_Format_A_16Bit.mem]", 20, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, Test_Format_A_16Bit.mem]", 20, false, false, false, false, false, true); // B (D, cj) - Double Click

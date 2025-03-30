@@ -1,0 +1,152 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Mar 23 18:02:08 2025
+# Process ID: 30296
+# Current directory: C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/ECE449-Lab-Project/ECE 449 Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent39788 C:\Users\Karl\Documents\University\Spring 2025\ECE449\Project\ECE449-Lab-Project\ECE 449 Project\ECE 449 Project.xpr
+# Log file: C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/ECE449-Lab-Project/ECE 449 Project/vivado.log
+# Journal file: C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/ECE449-Lab-Project/ECE 449 Project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Karl/Documents/University/Spring 2025/ECE449/Project/ECE449-Lab-Project/ECE 449 Project/ECE 449 Project.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+source cpu_top_tb.tcl
+add_wave {{/cpu_top_tb/uut/pc_addr}} {{/cpu_top_tb/uut/instruction}} {{/cpu_top_tb/uut/opcode}} {{/cpu_top_tb/uut/ra}} {{/cpu_top_tb/uut/rb}} {{/cpu_top_tb/uut/rc}} 
+restart
+run 200 ns
+restart
+relaunch_sim
+restart
+run 200 ns
+restart
+relaunch_sim
+restart
+run 200 ns
+restart
+run 500 ns
+restart
+relaunch_sim
+restart
+run 500 ns
+restart
+run 200 ns
+add_wave {{/cpu_top_tb/uut/ROM_inst/rom_addr}} {{/cpu_top_tb/uut/ROM_inst/douta}} {{/cpu_top_tb/uut/ROM_inst/low_byte}} {{/cpu_top_tb/uut/ROM_inst/high_byte}} 
+add_wave {{/cpu_top_tb/uut/ROM_inst/read_stage}} 
+restart
+run all
+restart
+run 200 ns
+restart
+relaunch_sim
+restart
+run 500 ns
+close_sim
+launch_simulation
+source cpu_top_tb.tcl
+add_wave {{/cpu_top_tb/uut/pc_addr}} {{/cpu_top_tb/uut/instruction}} {{/cpu_top_tb/uut/opcode}} {{/cpu_top_tb/uut/ra}} {{/cpu_top_tb/uut/rb}} {{/cpu_top_tb/uut/rc}} 
+add_wave {{/cpu_top_tb/uut/ROM_inst/rom_addr}} {{/cpu_top_tb/uut/ROM_inst/douta}} {{/cpu_top_tb/uut/ROM_inst/low_byte}} {{/cpu_top_tb/uut/ROM_inst/high_byte}} 
+add_wave {{/cpu_top_tb/uut/ROM_inst/read_stage}} 
+restart
+run 500 ns
+restart
+relaunch_sim
+restart
+run 500 ns
+restart
+relaunch_sim
+run 500 ns
+run 200 ns
+restart
+run 200 ns
+restart
+relaunch_sim
+run 200 ns
+restart
+run 200 ns
+run 500 ns
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source cpu_top_tb.tcl
+restart
+run 500 ns
+add_wave {{/cpu_top_tb/uut/pc_addr}} {{/cpu_top_tb/uut/instruction}} {{/cpu_top_tb/uut/opcode}} {{/cpu_top_tb/uut/ra}} {{/cpu_top_tb/uut/rb}} {{/cpu_top_tb/uut/rc}} 
+add_wave {{/cpu_top_tb/uut/ROM_inst/rom_addr}} {{/cpu_top_tb/uut/ROM_inst/douta}} {{/cpu_top_tb/uut/ROM_inst/low_byte}} {{/cpu_top_tb/uut/ROM_inst/high_byte}} 
+add_wave {{/cpu_top_tb/uut/ROM_inst/read_stage}} 
+restart
+run 500 ns
+restart
+run 200 ns
+relaunch_sim
+restart
+run 200 ns
+restart
+relaunch_sim
+relaunch_sim
+relaunch_sim
+restart
+run 200 ns
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source cpu_top_tb.tcl
+add_wave {{/cpu_top_tb/uut/pc_addr}} {{/cpu_top_tb/uut/instruction}} {{/cpu_top_tb/uut/opcode}} {{/cpu_top_tb/uut/ra}} {{/cpu_top_tb/uut/rb}} {{/cpu_top_tb/uut/rc}} 
+add_wave {{/cpu_top_tb/uut/ROM_inst/rom_addr}} {{/cpu_top_tb/uut/ROM_inst/douta}} {{/cpu_top_tb/uut/ROM_inst/low_byte}} {{/cpu_top_tb/uut/ROM_inst/high_byte}} 
+add_wave {{/cpu_top_tb/uut/ROM_inst/read_state}} 
+restart
+run all
+restart
+run 200 ns
+restart
+relaunch_sim
+restart
+run 200 ns
+restart
+relaunch_sim
+restart
+run 200 ns
+restart
+relaunch_sim
+relaunch_sim
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source cpu_top_tb.tcl
+restart
+add_wave {{/cpu_top_tb/uut/pc_addr}} {{/cpu_top_tb/uut/instruction}} {{/cpu_top_tb/uut/opcode}} {{/cpu_top_tb/uut/ra}} {{/cpu_top_tb/uut/rb}} {{/cpu_top_tb/uut/rc}} 
+add_wave {{/cpu_top_tb/uut/ROM_inst/rom_addr}} {{/cpu_top_tb/uut/ROM_inst/douta}} {{/cpu_top_tb/uut/ROM_inst/low_byte}} {{/cpu_top_tb/uut/ROM_inst/high_byte}} 
+add_wave {{/cpu_top_tb/uut/ROM_inst/pc_enable}} 
+restart
+run 200 ns
+add_wave {{/cpu_top_tb/uut/ROM_inst/stage}} 
+restart
+run 200 ns
+restart
+relaunch_sim
+restart
+run 200 ns
+restart
+run 500 ns
+restart
+run 1000 ns
+restart
+relaunch_sim
+restart
+run 900 ns
+add_wave {{/cpu_top_tb/uut/IF_ID_inst/Decoder_inst/ID_EX_inst/EX_MEM_inst/ALU_result}} 
+restart
+run 900 ns
+run 835 ns
+restart
+run all
+restart
+run 835 ns
+close_sim
