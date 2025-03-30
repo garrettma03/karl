@@ -36,9 +36,9 @@ end ROM;
 
 architecture Behavioral of ROM is
     signal rom_addr       : std_logic_vector(7 downto 0);
-    signal douta, douta_reg : std_logic_vector(7 downto 0);
-    signal low_byte       : std_logic_vector(7 downto 0) := (others => '0');
-    signal high_byte      : std_logic_vector(7 downto 0) := (others => '0');
+    signal douta, douta_reg : std_logic_vector(15 downto 0);
+    signal low_byte  : std_logic_vector(7 downto 0) := (others => '0');
+    signal high_byte : std_logic_vector(7 downto 0) := (others => '0');
     signal pc_latched     : std_logic_vector(7 downto 0) := (others => '0');
     signal ena, regcea    : std_logic := '1';
     signal stage          : integer range 0 to 6 := 0;
@@ -49,7 +49,7 @@ begin
     -- XPM Single Port ROM instance
     xpm_memory_sprom_inst : xpm_memory_sprom
         generic map (
-        MEMORY_SIZE => 2048,
+        MEMORY_SIZE => 65536,
         MEMORY_PRIMITIVE => "auto",
         MEMORY_INIT_FILE => "Test_Format_A_16Bit.mem",
         MEMORY_INIT_PARAM => "",
@@ -59,7 +59,7 @@ begin
         ECC_MODE => "no_ecc",
         AUTO_SLEEP_TIME => 0,
         MEMORY_OPTIMIZATION => "true",
-        READ_DATA_WIDTH_A => 8,
+        READ_DATA_WIDTH_A => 16,
         ADDR_WIDTH_A => 8,
         READ_RESET_VALUE_A => "0",
         READ_LATENCY_A => 2
@@ -86,44 +86,22 @@ begin
                 reset_done <= '0';
                 stage <= 0;
                 rom_addr <= (others => '0');
-                low_byte <= (others => '0');
-                high_byte <= (others => '0');
-                pc_latched <= (others => '0');
             elsif reset_done = '0' then
                 reset_done <= '1';
             else
                 case stage is
                     when 0 =>
-                        -- Fetch low byte from pc_addr
-                        pc_latched <= pc_addr(7 downto 0);
-                        rom_addr <= pc_addr(7 downto 0);
+                        -- Fetch 16-bit instruction from pc_addr
+                        rom_addr <= pc_addr;
                         stage <= 1;
-
+                    
                     when 1 =>
                         -- Wait for ROM latency (2 cycles)
                         stage <= 2;
                     
                     when 2 =>
-                        stage <= 3;
-                    
-                    when 3 =>
-                        -- Latch low byte, issue high byte read
-                        douta_reg <= douta;
-                        low_byte <= douta_reg;
-                        rom_addr <= std_logic_vector(unsigned(pc_latched) + 1);
-                        stage <= 4;
-                    
-                    when 4 =>
-                        -- Wait for ROM latency (2 cycles)
-                        stage <= 5;
-                    
-                    when 5 =>
-                        stage <= 6;
-                    
-                    when 6 =>
-                        -- Latch high byte
-                        douta_reg <= douta;
-                        high_byte <= douta_reg;
+                        -- Latch full instruction
+                        instruction_out <= douta;
                         stage <= 0;
                     
                     when others =>
@@ -133,8 +111,7 @@ begin
         end if;
     end process;
     
-    -- Final instruction output
-    instruction_out <= low_byte & high_byte;
+    -- PC enable signal
     pc_enable <= '1' when stage = 0 else '0';
     
 end Behavioral;
