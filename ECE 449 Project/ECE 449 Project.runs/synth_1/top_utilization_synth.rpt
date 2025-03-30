@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Sat Mar 29 14:51:28 2025
-| Host         : DESKTOP-LLM95R4 running 64-bit major release  (build 9200)
+| Date         : Sun Mar 30 11:23:11 2025
+| Host         : DESKTOP-C39H9UM running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
 | Device       : 7a35tcpg236-1
@@ -33,8 +33,8 @@ Table of Contents
 | Slice LUTs*             |    0 |     0 |     20800 |  0.00 |
 |   LUT as Logic          |    0 |     0 |     20800 |  0.00 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |    5 |     0 |     41600 |  0.01 |
-|   Register as Flip Flop |    5 |     0 |     41600 |  0.01 |
+| Slice Registers         |    6 |     0 |     41600 |  0.01 |
+|   Register as Flip Flop |    6 |     0 |     41600 |  0.01 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
 | F7 Muxes                |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 1     |          Yes |         Set |            - |
-| 4     |          Yes |       Reset |            - |
+| 5     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -150,7 +150,7 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | OBUF     |   16 |                  IO |
-| FDRE     |    4 |        Flop & Latch |
+| FDRE     |    5 |        Flop & Latch |
 | IBUF     |    2 |                  IO |
 | FDSE     |    1 |        Flop & Latch |
 | BUFG     |    1 |               Clock |

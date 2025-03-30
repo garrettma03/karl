@@ -21,24 +21,24 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.cache/wt} [current_project]
-set_property parent.project_path {C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.xpr} [current_project]
+set_property webtalk.parent_dir {G:/karl/karl/ECE 449 Project/ECE 449 Project.cache/wt} [current_project]
+set_property parent.project_path {G:/karl/karl/ECE 449 Project/ECE 449 Project.xpr} [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo {c:/Xilinx/kar/ECE 449 Project/ECE 449 Project.cache/ip} [current_project]
+set_property ip_output_repo {g:/karl/karl/ECE 449 Project/ECE 449 Project.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  {C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ALU.vhd}
-  {C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/EX_MEM.vhd}
-  {C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ID_EX.vhd}
-  {C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/IF_ID.vhd}
-  {C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/MEM_WB.vhd}
-  {C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/PC.vhd}
-  {C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/RF8.vhd}
-  {C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ROM.vhd}
-  {C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/decoder.vhd}
-  {C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd}
+  {G:/karl/karl/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ALU.vhd}
+  {G:/karl/karl/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/EX_MEM.vhd}
+  {G:/karl/karl/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ID_EX.vhd}
+  {G:/karl/karl/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/IF_ID.vhd}
+  {G:/karl/karl/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/MEM_WB.vhd}
+  {G:/karl/karl/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/PC.vhd}
+  {G:/karl/karl/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/RF8.vhd}
+  {G:/karl/karl/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/ROM.vhd}
+  {G:/karl/karl/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/decoder.vhd}
+  {G:/karl/karl/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/top.vhd}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
