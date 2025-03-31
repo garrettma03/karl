@@ -24,27 +24,37 @@ entity decoder is
         O_wb_opr    :   out std_logic;
         O_mem_opr   :   out std_logic;
         O_is_shift  :   out std_logic;
-        O_is_InOut  :   out std_logic
+        O_is_InOut  :   out std_logic;
+        O_branch_en :   out std_logic
     );
 end decoder;
 
 architecture Behavioral of decoder is 
+--    type state_type is (FETCH, DECODE, EXECUTE, MEMORY, WRITEBACK);
+--    signal state, next_state : state_type;
 
-
-    begin
+begin
     process(clk, rst)
     begin
         if rst = '1' then
+--            state <= FETCH;        
+        O_alu_mode <= (others => '0');
+        O_wb_opr <= '0';
+        O_mem_opr <= '0';
+        O_is_shift <= '0';
+        O_is_InOut <= '0';
+        O_branch_en <= '0';
+        elsif rising_edge(clk) then
             O_alu_mode <= (others => '0');
             O_wb_opr <= '0';
             O_mem_opr <= '0';
             O_is_shift <= '0';
             O_is_InOut <= '0';
-        elsif rising_edge(clk) then
-                
+            O_branch_en <= '0';
+
             case I_op_code is
                 -- No Operation
-                when "0000000" => O_alu_mode <= "0000000"; -- NOP
+                when "0000000" => O_alu_mode <= "0000000";-- NOP
 
                 -- ALU Operations (Require Writeback)
                 when "0000001" => O_alu_mode <= "0000001"; O_wb_opr <= '1'; -- ADD
@@ -64,14 +74,14 @@ architecture Behavioral of decoder is
                 when "0100001" => O_alu_mode <= "0100001"; O_wb_opr <= '1'; O_is_InOut <= '1'; -- IN
 
                 -- Branch and Control Flow
-                when "1000000" => O_alu_mode <= "1000000"; -- BRR
-                when "1000001" => O_alu_mode <= "1000001"; -- BRR.N
-                when "1000010" => O_alu_mode <= "1000010"; -- BRR.Z
-                when "1000011" => O_alu_mode <= "1000011"; -- BR
-                when "1000100" => O_alu_mode <= "1000100"; -- BR.N
-                when "1000101" => O_alu_mode <= "1000101"; -- BR.Z
-                when "1000110" => O_alu_mode <= "1000110"; -- BR.SUB
-                when "1000111" => O_alu_mode <= "1000111"; -- RETURN
+                when "1000000" => O_alu_mode <= "1000000"; O_branch_en <= '1';  -- BRR
+                when "1000001" => O_alu_mode <= "1000001"; O_branch_en <= '1';  -- BRR.N
+                when "1000010" => O_alu_mode <= "1000010"; O_branch_en <= '1';  -- BRR.Z
+                when "1000011" => O_alu_mode <= "1000011"; O_branch_en <= '1';  -- BR
+                when "1000100" => O_alu_mode <= "1000100"; O_branch_en <= '1';  -- BR.N
+                when "1000101" => O_alu_mode <= "1000101"; O_branch_en <= '1';  -- BR.Z
+                when "1000110" => O_alu_mode <= "1000110"; O_branch_en <= '1';  -- BR.SUB
+                when "1000111" => O_alu_mode <= "1000111"; O_branch_en <= '1';  -- RETURN
 
                 -- Memory Operations (Require Read/Write)
                 when "0010000" => O_alu_mode <= "0010000"; O_mem_opr <= '1'; O_wb_opr <= '1'; -- LOAD
@@ -93,5 +103,4 @@ architecture Behavioral of decoder is
             end case;
         end if;
     end process;
-
 end Behavioral;

@@ -78,14 +78,12 @@ process(clk)
                 high_byte <= (others => '0');
                 pc_latched <= (others => '0');
                 instruction_reg <= (others => '0');
-                instruction_valid <= '0';
             else
                 case stage is
                     when 0 =>
                         -- Start fetch for first byte
                         pc_latched <= pc_addr(7 downto 0);
                         rom_addr <= pc_addr(7 downto 0);
-                        instruction_valid <= '0';
                         stage <= 1;
     
                     when 1 =>
@@ -110,7 +108,6 @@ process(clk)
                     when 5 =>
                         -- Assemble full instruction with correct byte order
                         instruction_reg <= high_byte & low_byte;
-                        instruction_valid <= '1';
                         stage <= 0;
     
                     when others =>

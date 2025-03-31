@@ -210,8 +210,6 @@ architecture Structural of top is
     -- Register file signals
     signal rd_data1       : std_logic_vector(15 downto 0);
     signal rd_data2       : std_logic_vector(15 downto 0);
-    signal wb_data        : std_logic_vector(15 downto 0);
-    signal wb_ra          : std_logic_vector(2 downto 0);
     signal wb_enable      : std_logic;
     
     -- ID/EX signals
@@ -233,9 +231,6 @@ architecture Structural of top is
     signal exmem_wb_opr   : std_logic;
     signal exmem_ra       : std_logic_vector(2 downto 0);
     signal exmem_mem_data : std_logic_vector(15 downto 0);
-    
-    -- Memory signals
-    signal mem_data_out   : std_logic_vector(15 downto 0);
     
     -- MEM/WB signals
     signal memwb_wb_opr   : std_logic;

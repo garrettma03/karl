@@ -2,11 +2,11 @@
 # Webtalk v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sat Mar 29 14:54:01 2025
-# Process ID: 13540
-# Current directory: C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.sim/sim_1/behav/xsim/xsim.dir/top_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: C:/Xilinx/kar/ECE 449 Project/ECE 449 Project.sim/sim_1/behav/xsim\webtalk.jou
+# Start of session at: Sun Mar 30 20:03:16 2025
+# Process ID: 31440
+# Current directory: G:/karl/karl/ECE 449 Project/ECE 449 Project.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source G:/karl/karl/ECE 449 Project/ECE 449 Project.sim/sim_1/behav/xsim/xsim.dir/cpu_top_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: G:/karl/karl/ECE 449 Project/ECE 449 Project.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: G:/karl/karl/ECE 449 Project/ECE 449 Project.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/Xilinx/kar/ECE -notrace
+source G:/karl/karl/ECE -notrace

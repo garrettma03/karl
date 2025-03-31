@@ -2,9 +2,6 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-library xpm;
-use xpm.vcomponents.all;
-
 entity register_file is
     port(
         rst         : in std_logic; 
@@ -37,7 +34,6 @@ architecture behavioural of register_file is
     signal ra_internal : std_logic_vector(2 downto 0) := "000";
     signal is_inout_internal : std_logic := '0';
 
-
 begin
     -- Calculate concatenation and shift amount
     concatenated <= rd_index1 & rd_index2;
@@ -46,14 +42,14 @@ begin
     ra_internal <= I_ra;
     is_inout_internal <= I_is_InOut;
 
-    -- Write operation
+    -- Write operation (clocked)
     process(clk, rst)
     begin
         if rising_edge(clk) then
             if rst = '1' then
                 reg_file(0) <= x"0000";
-                reg_file(1) <= x"000A";
-                reg_file(2) <= x"0002";
+                reg_file(1) <= x"0003";
+                reg_file(2) <= x"0005";
                 reg_file(3) <= x"0000";
                 reg_file(4) <= x"0000";
                 reg_file(5) <= x"0000";
@@ -75,13 +71,10 @@ begin
         end if;
     end process;
 
-    -- Format signals for rd_data1
-    rd_addr1 <= 
-        I_ra when (is_inout_internal = '1') else  
-        I_ra when (I_is_shift = '1') else  
-        rd_index1;                      
+    -- Read address logic (combinational)
+    rd_addr1 <= I_ra when (is_inout_internal = '1' or I_is_shift = '1') else rd_index1;
 
-    -- Read operation for data1_from_reg
+    -- Read operation for data1_from_reg (combinational)
     data1_from_reg <= 
         reg_file(0) when (rd_addr1 = "000") else
         reg_file(1) when (rd_addr1 = "001") else
@@ -92,7 +85,7 @@ begin
         reg_file(6) when (rd_addr1 = "110") else 
         reg_file(7);
 
-    -- Read operation for data2_from_reg
+    -- Read operation for data2_from_reg (combinational)
     data2_from_reg <= 
         reg_file(0) when (rd_index2 = "000") else
         reg_file(1) when (rd_index2 = "001") else
@@ -103,7 +96,7 @@ begin
         reg_file(6) when (rd_index2 = "110") else 
         reg_file(7);
 
-    -- Final output assignment
+    -- Final output assignment (combinational)
     rd_data1 <= data1_from_reg;
     rd_data2 <= (x"000" & shift_amount) when (I_is_shift = '1') else data2_from_reg;
 
