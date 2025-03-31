@@ -1,13 +1,41 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: Karl Hilario and Garrett Ma
+-- 
+-- Create Date: 02/27/2025 02:36:03 PM
+-- Design Name: 
+-- Module Name: Top Testbench
+-- Project Name: CPU Project
+-- Target Devices: 
+-- Tool Versions: 
+-- Description: 
+-- 
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx leaf cells in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
 
 entity cpu_top_tb is
 end cpu_top_tb;
 
 architecture Behavioral of cpu_top_tb is
 
-    -- DUT component
+    -- Top component declaration
     component top
         port(
             clk      : in  std_logic;
@@ -31,19 +59,19 @@ architecture Behavioral of cpu_top_tb is
 
 begin
 
-    -- Instantiate DUT
-    uut: top
-        port map (
-            clk         => clk_tb,
-            rst_exec    => rst_exec_tb,
-            rst_load    => rst_load_tb,
-            in_port     => in_port_tb,
-            out_port    => out_port_tb
-        );
+    -- Top component instantiation
+    Top_inst: top port map (
+        clk         => clk_tb,
+        rst_exec    => rst_exec_tb,
+        rst_load    => rst_load_tb,
+        in_port     => in_port_tb,
+        out_port    => out_port_tb
+    );
 
     -- Clock generator
     clk_process : process
     begin
+        -- Generate Clock
         while true loop
             clk_tb <= '0';
             wait for clk_period / 2;
@@ -55,23 +83,14 @@ begin
     -- Test procedure
     stim_proc: process
     begin
---        -- Initial state
---        rst_exec_tb <= '0';
---        rst_load_tb <= '0';
---        wait for 20 ns;
-
---        -- Trigger reset & execute
---        rst_exec_tb <= '1';
---        wait for clk_period;
---        rst_exec_tb <= '0';
+        -- Reset CPU
         wait for 30 ns;
         rst_exec_tb <= '1';
         wait for clk_period;
+        -- Start Execution
         rst_exec_tb <= '0';
-        -- Wait and let CPU iterate
         wait for 500 ns;
 
-        -- Done
         wait;
     end process;
 

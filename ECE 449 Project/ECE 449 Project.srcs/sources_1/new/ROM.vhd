@@ -1,9 +1,34 @@
 ----------------------------------------------------------------------------------
--- Optimized ROM Fix: Ensures Proper Instruction Fetching
+-- Company: 
+-- Engineer: Karl Hilario and Garrett Ma
+-- 
+-- Create Date: 02/24/2025 05:42:28 PM
+-- Design Name: 
+-- Module Name: ROM
+-- Project Name: CPU Project
+-- Target Devices: 
+-- Tool Versions: 
+-- Description: 
+-- 
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
 ----------------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx leaf cells in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
 
 Library xpm;
 use xpm.vcomponents.all;
@@ -30,12 +55,12 @@ architecture Behavioral of ROM is
     signal high_byte      : std_logic_vector(7 downto 0) := (others => '0');
     signal pc_latched     : std_logic_vector(7 downto 0) := (others => '0');
     signal ena, regcea    : std_logic := '1';
-    signal stage          : integer range 0 to 5 := 0; -- Extended to 5 stages
-    signal instruction_reg : std_logic_vector(15 downto 0) := (others => '0'); -- Output register
-    signal instruction_valid : std_logic := '0'; -- Validity flag
+    signal stage          : integer range 0 to 5 := 0;
+    signal instruction_reg : std_logic_vector(15 downto 0) := (others => '0');
 
 begin
-    -- xpm_memory_sprom instantiation remains unchanged
+    -- xpm_memory_sprom: Single Port ROM
+    -- Xilinx Parameterized Macro, Version 2017.4
     xpm_memory_sprom_inst : xpm_memory_sprom
         generic map (
             MEMORY_SIZE => 2048,
@@ -66,11 +91,14 @@ begin
             sbiterra => open,
             dbiterra => open
         );
+        
+        -- End of xpm_memory_sprom_inst instance declaration
 
     -- ROM Access Process
-process(clk)
+    process(clk)
     begin
         if rising_edge(clk) then
+        -- Set default values
             if rst = '1' then
                 stage <= 0;
                 rom_addr <= (others => '0');
@@ -87,26 +115,26 @@ process(clk)
                         stage <= 1;
     
                     when 1 =>
-                        -- Wait for ROM latency (cycle 1)
+                        -- Latency is set to 1 so we need 1 clock cycle to latch
                         stage <= 2;
                         
                     when 2 =>
-                        -- Extra cycle to ensure data is stable
-                        low_byte <= douta; -- Capture the stable low byte
-                        rom_addr <= std_logic_vector(unsigned(pc_latched) + 1);
+                        -- Give extra stage for latching low value
+                        low_byte <= douta;
+                        rom_addr <= std_logic_vector(unsigned(pc_latched) + 1); -- Increment rom_addr to grab the next half of the instruction
                         stage <= 3;
     
                     when 3 =>
-                        -- Wait for ROM latency (cycle 1 for high byte)
+                        -- Latency is set to 1 so we need 1 clock cycle to latch
                         stage <= 4;
                         
                     when 4 =>
-                        -- Extra cycle to ensure data is stable
-                        high_byte <= douta; -- Capture the stable high byte
+                        -- Give extra stage for latching high value
+                        high_byte <= douta;
                         stage <= 5;
                         
                     when 5 =>
-                        -- Assemble full instruction with correct byte order
+                        -- Concatenate the high and low bytes
                         instruction_reg <= high_byte & low_byte;
                         stage <= 0;
     
@@ -118,7 +146,7 @@ process(clk)
     end process;
 
     -- Output assignments
-    instruction_out <= instruction_reg; -- Output the registered value
+    instruction_out <= instruction_reg; -- Output the instruction
     pc_enable <= '1' when stage = 0 else '0';
     sbiterra <= '0';
     dbiterra <= '0';

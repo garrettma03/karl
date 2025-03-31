@@ -29,3 +29,37 @@ source cpu_top_tb.tcl
 add_wave {{/cpu_top_tb/uut}} 
 restart
 run 1050 ns
+add_files -fileset constrs_1 -norecurse {{G:/karl/karl/ECE 449 Project/BASYS3_Lab2_Example2.xdc}}
+import_files -fileset constrs_1 {{G:/karl/karl/ECE 449 Project/BASYS3_Lab2_Example2.xdc}}
+close [ open {G:/karl/karl/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/asd.vhd} w ]
+add_files {{G:/karl/karl/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/asd.vhd}}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{G:/karl/karl/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/asd.vhd}}] -no_script -reset -force -quiet
+remove_files  {{G:/karl/karl/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/asd.vhd}}
+file delete -force {G:/karl/karl/ECE 449 Project/ECE 449 Project.srcs/sources_1/new/asd.vhd}
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+close_sim
+launch_simulation
+source cpu_top_tb.tcl
+add_wave {{/cpu_top_tb/Top_inst}} 
+restart
+run 1050 ns
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+close_sim
+launch_simulation
+source cpu_top_tb.tcl
+add_wave {{/cpu_top_tb/Top_inst}} 
+restart
+run all
+restart
+run 1050 ns
+close_sim
+launch_simulation
+source cpu_top_tb.tcl
+restart
+add_wave {{/cpu_top_tb/Top_inst}} 
+run 1050 ns

@@ -48,6 +48,9 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc {{G:/karl/karl/ECE 449 Project/ECE 449 Project.srcs/constrs_1/imports/ECE 449 Project/BASYS3_Lab2_Example2.xdc}}
+set_property used_in_implementation false [get_files {{G:/karl/karl/ECE 449 Project/ECE 449 Project.srcs/constrs_1/imports/ECE 449 Project/BASYS3_Lab2_Example2.xdc}}]
+
 
 synth_design -top top -part xc7a35tcpg236-1
 

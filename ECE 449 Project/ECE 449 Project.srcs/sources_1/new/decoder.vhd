@@ -1,19 +1,34 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Karl Hilario and Garrett Ma
 -- 
--- Create Date: 02/25/2025
--- Design Name: CPU Decoder
--- Module Name: decoder - Behavioral
--- Project Name: 
+-- Create Date: 02/24/2025 05:39:41 PM
+-- Design Name: 
+-- Module Name: Decoder
+-- Project Name: CPU Project
 -- Target Devices: 
 -- Tool Versions: 
--- Description: Decodes instructions and passes register values to ALU.
+-- Description: 
+-- 
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx leaf cells in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;;
 
 entity decoder is
     port(
@@ -37,14 +52,16 @@ begin
     process(clk, rst)
     begin
         if rst = '1' then
---            state <= FETCH;        
-        O_alu_mode <= (others => '0');
-        O_wb_opr <= '0';
-        O_mem_opr <= '0';
-        O_is_shift <= '0';
-        O_is_InOut <= '0';
-        O_branch_en <= '0';
+            -- Set default values
+ --            state <= FETCH;        
+            O_alu_mode <= (others => '0');
+            O_wb_opr <= '0';
+            O_mem_opr <= '0';
+            O_is_shift <= '0';
+            O_is_InOut <= '0';
+            O_branch_en <= '0';
         elsif rising_edge(clk) then
+            -- Reset the values to ensure control signals don't stay high
             O_alu_mode <= (others => '0');
             O_wb_opr <= '0';
             O_mem_opr <= '0';

@@ -4,27 +4,4 @@ Running: G:/449frfr/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 27f64cf3f
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package xpm.vcomponents
-Compiling package vl.vl_types
-Compiling module xil_defaultlib.glbl
-Compiling architecture behavioral of entity xil_defaultlib.PC [pc_default]
-Compiling module xpm.xpm_memory_base(MEMORY_TYPE=3,ME...
-Compiling module xpm.xpm_memory_sprom(MEMORY_SIZE=204...
-Compiling architecture behavioral of entity xil_defaultlib.ROM [rom_default]
-Compiling architecture behavioral of entity xil_defaultlib.IF_ID [if_id_default]
-Compiling architecture behavioral of entity xil_defaultlib.decoder [decoder_default]
-Compiling architecture behavioural of entity xil_defaultlib.register_file [register_file_default]
-Compiling architecture behavioral of entity xil_defaultlib.ID_EX [id_ex_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.EX_MEM [ex_mem_default]
-Compiling architecture behavioral of entity xil_defaultlib.MEM_WB [mem_wb_default]
-Compiling architecture structural of entity xil_defaultlib.top [top_default]
-Compiling architecture behavioral of entity xil_defaultlib.cpu_top_tb
-Built simulation snapshot cpu_top_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

@@ -1,11 +1,11 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Karl Hilario and Garrett Ma
 -- 
--- Create Date: 02/24/2025 05:33:47 PM
+-- Create Date: 02/27/2025 01:54:47 PM
 -- Design Name: 
--- Module Name: top - Behavioral
--- Project Name: 
+-- Module Name: Top
+-- Project Name: CPU Project
 -- Target Devices: 
 -- Tool Versions: 
 -- Description: 
@@ -13,6 +13,7 @@
 -- Dependencies: 
 -- 
 -- Revision:
+-- Revision 0.01 - File Created
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
@@ -41,7 +42,7 @@ end top;
 
 architecture Structural of top is
 
-    -- Component Declarations
+    -- Register File component declaration
     component register_file is
         port(
             rst         : in std_logic; 
@@ -126,10 +127,10 @@ architecture Structural of top is
     -- IF_ID component declaration
     component IF_ID is
         port (
-            clk       : in std_logic;  -- Clock signal
-            rst       : in std_logic;  -- Reset signal
-            I_instr_in  : in std_logic_vector(15 downto 0); -- Full instruction from Memory
-            O_opcode    : out std_logic_vector(6 downto 0); -- Opcode (to Control Unit)
+            clk       : in std_logic;
+            rst       : in std_logic;
+            I_instr_in  : in std_logic_vector(15 downto 0);
+            O_opcode    : out std_logic_vector(6 downto 0);
             O_ra    :   out std_logic_vector(2 downto 0);
             O_rb    :   out std_logic_vector(2 downto 0);
             O_rc    :   out std_logic_vector(2 downto 0)
@@ -177,7 +178,7 @@ architecture Structural of top is
     end component;
     
     
-        -- Internal signals
+    -- Internal signals
     -- PC signals
     signal pc_out         : std_logic_vector(15 downto 0);
     signal pc_enable      : std_logic;
@@ -210,7 +211,6 @@ architecture Structural of top is
     -- Register file signals
     signal rd_data1       : std_logic_vector(15 downto 0);
     signal rd_data2       : std_logic_vector(15 downto 0);
-    signal wb_enable      : std_logic;
     
     -- ID/EX signals
     signal idex_op1       : std_logic_vector(15 downto 0);
@@ -363,12 +363,6 @@ begin
         O_wb_opr => memwb_wb_opr
     );
     
-    -- Write-back enable
-    wb_enable <= memwb_wb_opr;
-    
-    -- External I/O connections
-    -- Assuming in/out ports connect to the register file
-    -- Implementation depends on specific requirements
     out_port <= exmem_mem_data when is_inout = '1' else (others => '0');
     
 end Structural;

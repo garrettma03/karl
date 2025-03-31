@@ -1,6 +1,34 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: Karl Hilario and Garrett Ma
+-- 
+-- Create Date: 02/24/2025 05:38:49 PM
+-- Design Name: 
+-- Module Name: Register File
+-- Project Name: CPU Project
+-- Target Devices: 
+-- Tool Versions: 
+-- Description: 
+-- 
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx leaf cells in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
 
 entity register_file is
     port(
@@ -46,6 +74,7 @@ begin
     process(clk, rst)
     begin
         if rising_edge(clk) then
+        -- Preloaded values
             if rst = '1' then
                 reg_file(0) <= x"0000";
                 reg_file(1) <= x"0003";
@@ -71,10 +100,10 @@ begin
         end if;
     end process;
 
-    -- Read address logic (combinational)
+    -- Control signal if the opcode is IN/OUT/SHIFT to use ra as rd_data1
     rd_addr1 <= I_ra when (is_inout_internal = '1' or I_is_shift = '1') else rd_index1;
 
-    -- Read operation for data1_from_reg (combinational)
+    -- Read operation for data1_from_reg
     data1_from_reg <= 
         reg_file(0) when (rd_addr1 = "000") else
         reg_file(1) when (rd_addr1 = "001") else
@@ -85,7 +114,7 @@ begin
         reg_file(6) when (rd_addr1 = "110") else 
         reg_file(7);
 
-    -- Read operation for data2_from_reg (combinational)
+    -- Read operation for data2_from_reg
     data2_from_reg <= 
         reg_file(0) when (rd_index2 = "000") else
         reg_file(1) when (rd_index2 = "001") else
@@ -96,7 +125,7 @@ begin
         reg_file(6) when (rd_index2 = "110") else 
         reg_file(7);
 
-    -- Final output assignment (combinational)
+    -- Final output assignment
     rd_data1 <= data1_from_reg;
     rd_data2 <= (x"000" & shift_amount) when (I_is_shift = '1') else data2_from_reg;
 
